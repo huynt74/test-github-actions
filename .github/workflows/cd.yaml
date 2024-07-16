@@ -5,16 +5,16 @@ on:
   schedule:
     - cron: '0 0 * * 0'
   pull_request:
-    branchs: 
+    branches: 
       - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v3
-    - name: Show Backend DNS Name
-      env:
-        BACKEND_URL: haha
-      run: |
-        echo "REACT_APP_BACKEND_URL=${{env.REACT_APP_BACKEND_URL}}"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Show Backend DNS Name
+        env:
+          BACKEND_URL: haha
+        run: |
+          echo "REACT_APP_BACKEND_URL=${{env.REACT_APP_BACKEND_URL}}"
