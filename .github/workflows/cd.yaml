@@ -17,4 +17,4 @@ jobs:
         env:
           BACKEND_URL: haha
         run: |
-          echo "REACT_APP_BACKEND_URL=$REACT_APP_BACKEND_URL"
+          echo "REACT_APP_BACKEND_URL=${{variables.REACT_APP_BACKEND_URL}}"
